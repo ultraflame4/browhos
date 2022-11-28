@@ -1,0 +1,121 @@
+.toggleButton{
+    background: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+.searchContainer[toggled]>.toggleButton{
+    display: none;
+}
+
+.searchContainer{
+    --r1: #ff5454;
+    --r2: #47ff47;
+    --r3: #373aff;
+    --blur: 6px;
+    --dropshadow-opacity: 50%;
+
+
+    margin: auto;
+    position: relative;
+    border-radius: 1.5rem;
+    width: 50vw;
+
+    height: 4rem;
+    transition: all 200ms ease;
+
+    filter: drop-shadow(0 0 12px black);
+    animation: rainbow 5s linear infinite;
+    border: 0.3rem solid;
+    background: var(--bg-b);
+    overflow: hidden;
+
+}
+
+.searchContainer:not([toggled]){
+    width: 4rem;
+
+    aspect-ratio: 1;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.searchContainer:not([toggled]):active{
+    transform: scale(95%);
+}
+
+
+.searchContainer:not([toggled]) > .input{
+    display: none;
+}
+
+.input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    padding: 1rem 3rem 1rem 1.25rem;
+
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    background: transparent;
+    color: var(--text-c);
+    font-family: inherit;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.searchIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.searchIcon:hover{
+    transform: scale(1.1);
+}
+.searchIcon:active{
+    transform: scale(1);
+}
+
+
+@keyframes rainbow {
+    0%{
+        color: var(--r1);
+        border-color: var(--r1);
+        filter: drop-shadow(0 0 6px black) drop-shadow(0 0 var(--blur) var(--r1));
+    }
+    33%{
+        color: var(--r2);
+        border-color: var(--r2);
+        filter: drop-shadow(0 0 6px black) drop-shadow(0 0 var(--blur) var(--r2));
+    }
+    66%{
+        color: var(--r3);
+        border-color: var(--r3);
+        filter: drop-shadow(0 0 6px black) drop-shadow(0 0 var(--blur) var(--r3));
+    }
+    100%{
+        color: var(--r1);
+        border-color: var(--r1);
+        filter: drop-shadow(0 0 6px black) drop-shadow(0 0 var(--blur) var(--r1));
+    }
+}

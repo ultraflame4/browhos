@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
+import Searchbar from "./components/Search/Searchbar";
+
 
 function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  )
+
+
+    return (
+        <main className="App">
+            <Searchbar/>
+        </main>
+    )
 }
 
 export default App
