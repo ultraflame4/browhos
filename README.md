@@ -13,5 +13,5 @@ A cool browser home screen for browsers.
 - quick links
 
 ### Usage \ Installation:
-- Simply set `https://ultr42.live/browhos/main/` to your browser homepage or new tab page.
+- Simply set `https://ultraflame4.github.io/browhos/main/` to your browser homepage or new tab page. 
 
