@@ -1,7 +1,7 @@
 import {defineComponent, useOverlayToggle} from "@/utils";
 import classes from "./Searchbar.module.css";
 import {Icon} from "@iconify-icon/react";
-import React, {useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import {searchWithSearchEngine} from "@/core";
 
 export default defineComponent(props => {
@@ -20,6 +20,19 @@ export default defineComponent(props => {
             searchWithSearchEngine(query)
         }
     }
+
+    useEffect(() => {
+        const callback = (ev:KeyboardEvent) => {
+            console.log(toggleRef.current?.hasAttribute("toggled"),ev.key)
+            if (ev.key.toLowerCase() == "enter" && toggleRef.current?.hasAttribute("toggled")) {
+                onSearch()
+            }
+        }
+        document.addEventListener("keypress", callback)
+        return () => {
+            document.removeEventListener("keypress",callback)
+        }
+    })
 
 
     return (
