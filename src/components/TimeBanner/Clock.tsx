@@ -1,6 +1,6 @@
 import {defineComponent} from "@/utils";
 import {useEffect, useState} from "react";
-import classes from "./TimeBanner.module.css";
+import classes from "./Clock.module.css";
 
 
 export default defineComponent((props, context) => {

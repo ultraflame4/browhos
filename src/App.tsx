@@ -1,7 +1,7 @@
 
 import './App.css'
 import Searchbar from "./components/Search/Searchbar";
-import TimeBanner from "@/components/TimeBanner/TimeBanner";
+import TimeBanner from "@/components/TimeBanner/Clock";
 import {useEffect, useRef} from "react";
 import {generateCssRainbowAnimation} from "@/utils";
 
