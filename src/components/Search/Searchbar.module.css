@@ -17,21 +17,19 @@
     --r3: #373aff;
 
     --blur: 12px;
-    --fr1: var(--r1);
-    --fr2: var(--r2);
-    --fr3: var(--r3);
 
-
-    margin: auto;
     position: relative;
     border-radius: 1.5rem;
     width: 50vw;
 
     height: 4rem;
-    transition: all 200ms ease;
+    transition: all 200ms ease, color var(--rainbow-timing) linear, filter var(--rainbow-timing) linear, border-color var(--rainbow-timing) linear;
+    border-color: var(--rainbow);
 
-    filter: drop-shadow(0 0 12px black);
-    animation: rainbow 5s linear infinite;
+
+    color: var(--rainbow);
+    filter: drop-shadow(0 0 var(--blur) var(--rainbow));
+
     border: 0.3rem solid;
     background: var(--bg-b);
     overflow: hidden;
@@ -110,25 +108,3 @@
 }
 
 
-@keyframes rainbow {
-    0%{
-        color: var(--r1);
-        border-color: var(--r1);
-        filter: drop-shadow(0 0 var(--blur) var(--fr1));
-    }
-    33%{
-        color: var(--r2);
-        border-color: var(--r2);
-        filter: drop-shadow(0 0 var(--blur) var(--fr2));
-    }
-    66%{
-        color: var(--r3);
-        border-color: var(--r3);
-        filter: drop-shadow(0 0 var(--blur) var(--fr3));
-    }
-    100%{
-        color: var(--r1);
-        border-color: var(--r1);
-        filter: drop-shadow(0 0 var(--blur) var(--fr1));
-    }
-}
