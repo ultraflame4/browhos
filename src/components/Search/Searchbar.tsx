@@ -38,7 +38,7 @@ export default defineComponent(props => {
     return (
         <div className={classes.searchContainer} ref={toggleRef}>
             <button className={classes.toggleButton} ref={btnRef}></button>
-            <input type={"search"} className={classes.input} ref={inpRef} placeholder={"What are you gonna do today?"}/>
+            <input type={"search"} className={classes.input} ref={inpRef} placeholder={"Where are you going today?"}/>
 
             <Icon icon={"ri:search-line"} className={classes.searchIcon} onClick={onSearch}/>
 
