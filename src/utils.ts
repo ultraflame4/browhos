@@ -55,3 +55,14 @@ export function useOverlayToggle<T>(triggerElementRef = null, callback = null): 
     // @ts-ignore
     return ref;
 }
+
+
+export function generateCssRainbowAnimation() {
+    let percentIntervals = 360/100;
+    let cssString = ""
+    for (let i = 0; i < 100; i++) {
+        cssString+=`${i}%{--rainbow: hsl(${i*percentIntervals}deg,100%,70%);}`
+    }
+
+    return `@keyframes generatedRainbow {${cssString}}`
+}

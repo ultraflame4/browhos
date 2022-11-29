@@ -23,7 +23,8 @@
     width: 50vw;
 
     height: 4rem;
-    transition: all 200ms ease, color var(--rainbow-timing) linear, filter var(--rainbow-timing) linear, border-color var(--rainbow-timing) linear;
+
+    transition: all 200ms ease;
     border-color: var(--rainbow);
 
 
@@ -38,7 +39,9 @@
 
 .searchContainer:hover, .searchContainer:focus-within {
     --blur: 24px;
+
 }
+
 
 .searchContainer:not([toggled]){
     height: 6rem;
