@@ -1,8 +1,7 @@
 # browhos
 A cool browser home screen for browsers.
 
-![img.png](assets/img.png)
-
+![img.png](assets/img.png)!
 ## Notes:
 - This is in development.
 - It uses google for its search engine. This may change.
