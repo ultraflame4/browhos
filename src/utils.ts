@@ -60,7 +60,8 @@ export function useOverlayToggle<T>(triggerElementRef = null, callback = null): 
 export function generateCssRainbowAnimation() {
     let percentIntervals = 360/100;
     let cssString = ""
-    for (let i = 0; i < 100; i++) {
+    cssString+=`0%,100%{--rainbow: hsl(0deg,100%,70%);}`
+    for (let i = 1; i < 99; i++) {
         cssString+=`${i}%{--rainbow: hsl(${i*percentIntervals}deg,100%,70%);}`
     }
 

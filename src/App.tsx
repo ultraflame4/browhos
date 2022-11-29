@@ -1,8 +1,8 @@
 
 import './App.css'
 import Searchbar from "./components/Search/Searchbar";
-import TimeBanner from "@/components/TimeBanner/Clock";
-import {useEffect, useRef} from "react";
+import Clock from "@/components/Clock/Clock";
+import {useRef} from "react";
 import {generateCssRainbowAnimation} from "@/utils";
 
 
@@ -16,10 +16,13 @@ function App() {
                 {generateCssRainbowAnimation()}
             </style>
             <main className="App" ref={appRef}>
+                <Clock/>
 
-                <TimeBanner/>
                 <Searchbar/>
             </main>
+            <footer>
+
+            </footer>
         </>
 
     )

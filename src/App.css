@@ -25,6 +25,7 @@ body{
     align-items: center;
     justify-content: center;
     animation: generatedRainbow 10s linear infinite;
+    gap: 2rem;
 }
 
 

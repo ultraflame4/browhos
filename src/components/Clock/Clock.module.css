@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
-.timebanner{
-    font-size: 8rem;
+.datetimeText{
+    opacity: 0.5;
     letter-spacing: 0.1rem;
     color: var(--rainbow);
-    transition: color var(--rainbow-timing) linear;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.date{
+    font-weight: 600;
+}
+
+.clock{
+    font-size: 10rem;
+
 
     font-weight: 800;
     font-family: "Roboto Mono";
-    opacity: 0.5;
-    margin-top: 0;
+
 }
