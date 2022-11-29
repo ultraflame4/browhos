@@ -2,8 +2,9 @@
 import './App.css'
 import Searchbar from "./components/Search/Searchbar";
 import Clock from "@/components/Clock/Clock";
-import {useRef} from "react";
+import React, {useRef} from "react";
 import {generateCssRainbowAnimation} from "@/utils";
+import {Icon} from "@iconify-icon/react";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <>
             <style>
                 {generateCssRainbowAnimation()}
+
             </style>
             <main className="App" ref={appRef}>
                 <Clock/>
@@ -21,7 +23,10 @@ function App() {
                 <Searchbar/>
             </main>
             <footer>
-
+                <a href={"https://github.com/ultraflame4/browhos"}>
+                    <Icon icon={"mdi:github"} className={"footer-icon"}/>
+                    Github
+                </a>
             </footer>
         </>
 
