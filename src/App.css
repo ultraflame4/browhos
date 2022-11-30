@@ -78,7 +78,9 @@ footer > a > .footer-icon{
     align-items: center;
     width: fit-content;
     height: fit-content;
+    gap: 1rem;
 }
+
 
 
 .iWidget{
@@ -87,10 +89,37 @@ footer > a > .footer-icon{
     position: relative;
     color: var(--rainbow);
     filter: drop-shadow(0 0 var(--blur) var(--rainbow));
+    border: 0.3rem solid;
+    background: var(--bg-b);
+
+    --blur: 12px;
+
+    cursor: pointer;
+    border-radius: 100%;
 }
-.iWidget[toggled]>.toggleButton{
+
+.iWidget[toggled] {
+    border-radius: 1.5rem;
+
+
+}
+
+.iWidget[toggled]>.iWidget-button{
     display: none;
 }
+
+
+.iWidget:hover, .searchContainer:focus-within {
+    --blur: 24px;
+}
+
+
+
+.iWidget:not([toggled]):active {
+    transform: scale(95%);
+}
+
+
 .iWidget-button{
     background: none;
     position: absolute;

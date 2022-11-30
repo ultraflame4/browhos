@@ -32,10 +32,10 @@ export function useOverlayToggle<T>(triggerElementRef: MutableRefObject<HTMLElem
         const blurListener = (/**@type {MouseEvent}*/e) => {
             // @ts-ignore
             if (ref.current.contains(e.target)) {
-                console.log(ref.current)
+
                 return
             }
-            console.log(ref.current,"D")
+            console.log(ref.current,e.target)
             // @ts-ignore
             ref.current?.toggleAttribute("toggled", false)
             // @ts-ignore
@@ -43,9 +43,7 @@ export function useOverlayToggle<T>(triggerElementRef: MutableRefObject<HTMLElem
         }
 
 
-        document.addEventListener("click", blurListener,{
-            capture:true
-        })
+        document.addEventListener("click", blurListener)
         // @ts-ignore
         triggerElementRef.current?.addEventListener("click", clickListener)
 

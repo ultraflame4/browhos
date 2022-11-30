@@ -5,6 +5,7 @@ import Clock from "@/components/Clock/Clock";
 import React, {useRef} from "react";
 import {generateCssRainbowAnimation} from "@/utils";
 import {Icon} from "@iconify-icon/react";
+import AppDrawer from "@/components/AppDrawer/AppDrawer";
 
 
 function App() {
@@ -20,7 +21,10 @@ function App() {
             <main className="App" ref={appRef}>
                 <Clock/>
 
-                <Searchbar/>
+                <div className={"WidgetRow"}>
+                    <Searchbar/>
+                    <AppDrawer/>
+                </div>
             </main>
             <footer>
                 <a href={"https://github.com/ultraflame4/browhos"}>

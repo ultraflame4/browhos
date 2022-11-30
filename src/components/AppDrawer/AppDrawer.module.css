@@ -1,0 +1,25 @@
+
+.AppDrawerContainer{
+    height: 6rem;
+    width: 6rem;
+}
+
+.AppDrawerContainer[toggled]{
+    width: 50vw;
+}
+
+*:has([toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
+    /*display: none;*/
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1.5rem;
+}
+
+.drawerIcon{
+    font-size: 2.5rem;
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
