@@ -17,7 +17,11 @@ export default defineComponent(props => {
 
         <Icon icon={"material-symbols:apps"} className={classes.drawerIcon}/>
         <ul>
+
             <AppDrawerItem/>
+            <li>
+                <Icon icon={"material-symbols:add-box"} className={classes.drawerAddIcon}/>
+            </li>
         </ul>
 
     </InteractiveWidget>)

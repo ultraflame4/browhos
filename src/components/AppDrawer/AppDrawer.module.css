@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 
@@ -26,20 +27,40 @@
     border-radius: 1.5rem;
 }
 
-.drawerIcon{
+.drawerIcon,.drawerAddIcon{
     font-size: 3rem;
     aspect-ratio: 1/1;
 }
 
-.AppDrawerContainer:not([toggled]) .drawerItem{
+.drawerAddIcon{
+    cursor: pointer;
+    transition: all 200ms ease;
+    opacity: 0.6;
+}
+.drawerAddIcon:hover{
+    opacity: 1;
+}
+.drawerAddIcon:active{
+    transform: scale(.9);
+}
+
+
+.AppDrawerContainer:not([toggled]) li{
     display: none;
 }
 
+.AppDrawerContainer li{
+    display: flex;
+
+}
+
 .AppDrawerContainer > ul{
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 
 .drawerItem{
     height: 3rem;
