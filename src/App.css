@@ -72,3 +72,31 @@ footer > a > .footer-icon{
     font-size: 1.3em;
 }
 
+.WidgetRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.iWidget{
+    transition: all 200ms ease;
+    border-color: var(--rainbow);
+    position: relative;
+    color: var(--rainbow);
+    filter: drop-shadow(0 0 var(--blur) var(--rainbow));
+}
+.iWidget[toggled]>.toggleButton{
+    display: none;
+}
+.iWidget-button{
+    background: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
