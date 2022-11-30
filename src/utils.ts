@@ -58,11 +58,12 @@ export function useOverlayToggle<T>(triggerElementRef = null, callback = null): 
 
 
 export function generateCssRainbowAnimation() {
-    let percentIntervals = 360/100;
+    let percentIntervals = 100/360;
     let cssString = ""
     cssString+=`0%,100%{--rainbow: hsl(0deg,100%,70%);}`
-    for (let i = 1; i < 99; i++) {
-        cssString+=`${i}%{--rainbow: hsl(${i*percentIntervals}deg,100%,70%);}`
+
+    for (let i = 1; i < 360; i++) {
+        cssString+=`${i*percentIntervals}%{--rainbow: hsl(${i}deg,100%,70%);}`
     }
 
     return `@keyframes generatedRainbow {${cssString}}`
