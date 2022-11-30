@@ -109,7 +109,7 @@ footer > a > .footer-icon{
 }
 
 
-.iWidget:hover, .searchContainer:focus-within {
+.iWidget:hover, .iWidget:focus-within {
     --blur: 24px;
 }
 
