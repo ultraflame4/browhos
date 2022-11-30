@@ -75,7 +75,7 @@ footer > a > .footer-icon{
 .WidgetRow{
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
+
     width: fit-content;
     height: fit-content;
     gap: 1rem;

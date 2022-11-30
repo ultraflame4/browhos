@@ -7,27 +7,45 @@
     justify-content: center;
 }
 
+
+
 .AppDrawerContainer[toggled]{
     width: 50vw;
-    height: 25vh;
-    padding: 1rem 0.9rem;
+    max-height: 25vh;
+    height: fit-content;
+
+    padding: 1rem;
     align-items: flex-start;
+    align-self: center;
     justify-content: flex-start;
 }
 
 *:has([toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
-    /*display: none;*/
     height: 4rem;
     width: 4rem;
     border-radius: 1.5rem;
 }
 
 .drawerIcon{
-    font-size: 2.5rem;
+    font-size: 3rem;
     aspect-ratio: 1/1;
 }
 
+.AppDrawerContainer:not([toggled]) .drawerItem{
+    display: none;
+}
 
-.AppDrawerContainer[toggled] > .drawerIcon{
+.AppDrawerContainer > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.drawerItem{
+    height: 3rem;
+    min-width: 3rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
