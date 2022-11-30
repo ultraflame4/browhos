@@ -1,15 +1,3 @@
-.toggleButton{
-    background: none;
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-}
-.searchContainer[toggled]>.toggleButton{
-    display: none;
-}
 
 .searchContainer{
     --r1: #ff5454;
@@ -24,12 +12,7 @@
 
     height: 4rem;
 
-    transition: all 200ms ease;
-    border-color: var(--rainbow);
 
-
-    color: var(--rainbow);
-    filter: drop-shadow(0 0 var(--blur) var(--rainbow));
 
     border: 0.3rem solid;
     background: var(--bg-b);

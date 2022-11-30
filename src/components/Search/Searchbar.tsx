@@ -3,16 +3,19 @@ import classes from "./Searchbar.module.css";
 import {Icon} from "@iconify-icon/react";
 import React, {useEffect, useRef} from "react";
 import {searchWithSearchEngine} from "@/core";
+import InteractiveWidget from "@/components/Basic/InteractiveWidget";
 
 export default defineComponent(props => {
-    const btnRef = useRef<HTMLButtonElement>(null)
+
     const inpRef = useRef<HTMLInputElement>(null)
-    //@ts-ignore
-    const toggleRef = useOverlayToggle<HTMLDivElement>(btnRef, (toggled) => {
+    const isToggled = useRef(false)
+
+    const onToggle = (toggled:boolean) => {
+        isToggled.current=toggled
         if (toggled) {
             inpRef.current?.focus()
         }
-    })
+    }
 
     function onSearch() {
         let query = inpRef.current?.value ?? ""
@@ -23,8 +26,7 @@ export default defineComponent(props => {
 
     useEffect(() => {
         const callback = (ev:KeyboardEvent) => {
-            console.log(toggleRef.current?.hasAttribute("toggled"),ev.key)
-            if (ev.key.toLowerCase() == "enter" && toggleRef.current?.hasAttribute("toggled")) {
+            if (ev.key.toLowerCase() == "enter" && isToggled.current) {
                 onSearch()
             }
         }
@@ -36,13 +38,11 @@ export default defineComponent(props => {
 
 
     return (
-        <div className={classes.searchContainer} ref={toggleRef}>
-            <button className={classes.toggleButton} ref={btnRef}></button>
+        <InteractiveWidget className={classes.searchContainer} onToggle={onToggle}>
             <input type={"search"} className={classes.input} ref={inpRef} placeholder={"Where are you going today?"}/>
 
             <Icon icon={"ri:search-line"} className={classes.searchIcon} onClick={onSearch}/>
+        </InteractiveWidget>
 
-
-        </div>
     )
 })
