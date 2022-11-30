@@ -35,7 +35,7 @@ export function useOverlayToggle<T>(triggerElementRef: MutableRefObject<HTMLElem
 
                 return
             }
-            console.log(ref.current,e.target)
+
             // @ts-ignore
             ref.current?.toggleAttribute("toggled", false)
             // @ts-ignore
@@ -43,7 +43,9 @@ export function useOverlayToggle<T>(triggerElementRef: MutableRefObject<HTMLElem
         }
 
 
-        document.addEventListener("click", blurListener)
+        document.addEventListener("click", blurListener,{
+            capture:true
+        })
         // @ts-ignore
         triggerElementRef.current?.addEventListener("click", clickListener)
 

@@ -2,10 +2,17 @@
 .AppDrawerContainer{
     height: 6rem;
     width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .AppDrawerContainer[toggled]{
     width: 50vw;
+    height: 25vh;
+    padding: 1rem 0.9rem;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 *:has([toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
@@ -17,9 +24,10 @@
 
 .drawerIcon{
     font-size: 2.5rem;
-    height: 100%;
     aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+
+.AppDrawerContainer[toggled] > .drawerIcon{
+
 }
