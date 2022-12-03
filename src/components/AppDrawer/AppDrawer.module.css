@@ -1,7 +1,7 @@
 
 .AppDrawerContainer{
-    height: 6rem;
-    width: 6rem;
+    /*height: 5rem;*/
+    width: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,24 +12,44 @@
 
 .AppDrawerContainer[toggled]{
     width: 50vw;
-    max-height: 25vh;
-    height: fit-content;
+    min-height: 5rem;
+    max-height: fit-content;
+    padding: 0 1rem;
+    box-sizing: border-box;
 
-    padding: 1rem;
-    align-items: flex-start;
-    align-self: center;
+
     justify-content: flex-start;
 }
 
-*:has([toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
+*:has(>[toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
     height: 4rem;
     width: 4rem;
     border-radius: 1.5rem;
 }
 
 .drawerIcon,.drawerAddIcon{
-    font-size: 3rem;
+    font-size: 2.3rem;
     aspect-ratio: 1/1;
+}
+
+
+.AppDrawerContainer>ul{
+    display: none;
+}
+.AppDrawerContainer>ul>li{
+    display: block;
+
+}
+.AppDrawerContainer>ul>li:has(.drawerAddIcon){
+    display: flex;
+    align-items: center;
+}
+.AppDrawerContainer[toggled]>ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 .drawerAddIcon{
@@ -45,27 +65,10 @@
 }
 
 
-.AppDrawerContainer:not([toggled]) li{
-    display: none;
-}
-
-.AppDrawerContainer li{
-    display: flex;
-
-}
-
-.AppDrawerContainer > ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-
 .drawerItem{
     height: 3rem;
     min-width: 3rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
     display: flex;
     align-items: center;
     justify-content: center;

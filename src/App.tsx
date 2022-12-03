@@ -22,8 +22,8 @@ function App() {
                 <Clock/>
 
                 <div className={"WidgetRow"}>
-                    <AppDrawer/>
                     <Searchbar/>
+                    <AppDrawer/>
                 </div>
             </main>
             <footer>
