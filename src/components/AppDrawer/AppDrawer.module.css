@@ -1,5 +1,5 @@
 
-.AppDrawerContainer{
+.AppDrawerContainer {
     /*height: 5rem;*/
     width: 5rem;
     display: flex;
@@ -9,8 +9,7 @@
 }
 
 
-
-.AppDrawerContainer[toggled]{
+.AppDrawerContainer[toggled] {
     width: 50vw;
     min-height: 5rem;
     max-height: fit-content;
@@ -21,30 +20,33 @@
     justify-content: flex-start;
 }
 
-*:has(>[toggled]:not(.AppDrawerContainer))>.AppDrawerContainer{
+*:has(>[toggled]:not(.AppDrawerContainer)) > .AppDrawerContainer {
     height: 4rem;
     width: 4rem;
     border-radius: 1.5rem;
 }
 
-.drawerIcon,.drawerAddIcon{
+.drawerIcon, .drawerAddIcon {
     font-size: 2.3rem;
     aspect-ratio: 1/1;
 }
 
 
-.AppDrawerContainer>ul{
+.AppDrawerContainer > ul {
     display: none;
 }
-.AppDrawerContainer>ul>li{
+
+.AppDrawerContainer > ul > li {
     display: block;
 
 }
-.AppDrawerContainer>ul>li:has(.drawerAddIcon){
+
+.AppDrawerContainer > ul > li:has(.drawerAddIcon) {
     display: flex;
     align-items: center;
 }
-.AppDrawerContainer[toggled]>ul {
+
+.AppDrawerContainer[toggled] > ul {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -52,24 +54,70 @@
     align-items: center;
 }
 
-.drawerAddIcon{
+.drawerAddIcon {
     cursor: pointer;
     transition: all 200ms ease;
     opacity: 0.6;
 }
-.drawerAddIcon:hover{
+
+.drawerAddIcon:hover {
     opacity: 1;
 }
-.drawerAddIcon:active{
+
+.drawerAddIcon:active {
     transform: scale(.9);
 }
 
 
-.drawerItem{
+.drawerItem {
     height: 3rem;
     min-width: 3rem;
     font-size: 2.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.AddItemOverlay {
+    border: 0.3rem solid var(--rainbow);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-a);
+    filter: drop-shadow(0 0 32px black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.AddItemOverlay > h2 {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+
+.AddItemOverlay > button {
+    width: fit-content;
+
+    font-weight: 600;
+    border: 0.1rem solid var(--rainbow);
+    border-radius: 0.6rem;
+    color: var(--rainbow);
+    outline: none;
+    background: var(--bg-b);
+    transition: all 100ms ease;
+    padding: 0.5rem 1.25rem;
+
+
+
+    cursor: pointer;
+}
+
+.AddItemOverlay > button:hover{
+    transform: scale(1.05);
+}
+
+.AddItemOverlay > button:active{
+    transform: scale(0.95);
 }

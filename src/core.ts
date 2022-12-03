@@ -1,3 +1,5 @@
+import React, {createContext} from "react";
+
 const googleSearch = "https://www.google.com/search"
 
 
@@ -22,6 +24,19 @@ function searchWithSearchEngine(s: string) {
 }
 
 
+const CurrentModal = createContext<
+    {
+        setModal: (modal: React.ReactElement | null)=>void,
+        getModal: ()=>React.ReactElement | null,
+    }
+    >({
+    setModal(modal){},
+    getModal() {
+        return null
+    }
+    })
+
 export {
-    searchWithSearchEngine
+    searchWithSearchEngine,
+    CurrentModal
 }
