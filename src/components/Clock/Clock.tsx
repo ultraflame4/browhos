@@ -4,13 +4,13 @@ import classes from "./Clock.module.css";
 
 
 const daysOfWeek: string[] = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday",
+    "Saturday"
 ]
 const months: string[] = [
     "January",
@@ -38,7 +38,7 @@ export default defineComponent((props, context) => {
         const intervalIndex = setInterval(() => {
             let now = new Date()
             setTime(`${now.getHours()}:${now.getMinutes()}`)
-            setDateStr(`${daysOfWeek[now.getDay()+1]}, ${now.getDate()} ${months[now.getMonth()+1]} ${now.getFullYear()}`)
+            setDateStr(`${daysOfWeek[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`)
 
         }, 200)
 
