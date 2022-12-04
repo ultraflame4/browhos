@@ -2,8 +2,9 @@ import {defineComponent} from "@/utils";
 import classes from "./AppDrawer.module.css"
 import InteractiveWidget from "@/components/Basic/InteractiveWidget";
 import {Icon} from "@iconify-icon/react";
-import {useContext} from "react";
-import {CurrentModal} from "@/core";
+import Modal from 'react-modal';
+import {useState} from "react";
+
 
 const AppDrawerItem = defineComponent(props => {
     return (
@@ -26,23 +27,20 @@ const AddItemModal= defineComponent(props => {
 })
 
 export default defineComponent(props => {
-    const modalctx = useContext(CurrentModal)
+    const [addItemModalOpened,setAddItemModalOpened] = useState(false)
+
 
     function onAddItem() {
-
-        modalctx.setModal(<AddItemModal/>)
+        setAddItemModalOpened(true)
     }
 
     return( <InteractiveWidget className={classes.AppDrawerContainer}>
 
         <Icon icon={"material-symbols:apps"} className={classes.drawerIcon}/>
         <ul>
-
             <AppDrawerItem/>
-            <li role={"button"} onClick={onAddItem}>
-                <Icon icon={"material-symbols:add-box"} className={classes.drawerAddIcon}/>
-            </li>
         </ul>
+
 
 
     </InteractiveWidget>)

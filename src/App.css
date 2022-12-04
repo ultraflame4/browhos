@@ -32,46 +32,17 @@ body {
     gap: 2rem;
 }
 
-
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 0.5rem 1rem;
-    font-weight: 800;
-    font-family: "Open Sans", sans-serif;
-
-}
-
-footer > a:hover {
+h1,h2,h3{
     color: var(--rainbow);
-    cursor: pointer;
-    filter: drop-shadow(0 0 var(--blur) var(--rainbow));
     opacity: 0.7;
+    letter-spacing: 0.05em;
 }
 
-footer > a:active {
-    --blur: 0.5em;
-    cursor: pointer;
+.page-title{
+    font-size: 2.5rem;
 
-}
+    margin: 2rem;
 
-footer > a {
-    --blur: 0.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 200ms ease;
-    gap: 0.15rem;
-    color: var(--text-d);
-
-    text-decoration: none;
-
-    opacity: 0.3;
-}
-
-footer > a > .footer-icon {
-    font-size: 1.3em;
 }
 
 .WidgetRow {
@@ -140,4 +111,89 @@ input {
     outline: none;
     color: var(--text-d);
     font-weight: 600;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem 1rem;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--rainbow);
+    cursor: pointer;
+    filter: drop-shadow(0 0 var(--blur) var(--rainbow));
+    opacity: 0.7;
+}
+
+footer a:active {
+    --blur: 0.5em;
+    cursor: pointer;
+
+}
+
+footer a {
+    --blur: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease;
+    gap: 0.15rem;
+    color: var(--text-d);
+
+    text-decoration: none;
+
+    opacity: 0.3;
+}
+
+
+footer a > .footer-icon {
+    font-size: 1.3em;
+}
+
+footer > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+footer > ul > li{
+    float: right;
+    margin-left: 0.75rem;
+}
+
+button {
+    width: fit-content;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    border: 0.14rem solid var(--rainbow);
+    border-radius: 0.6rem;
+    color: var(--rainbow);
+    outline: none;
+    background: var(--bg-b);
+    transition: background-color 200ms linear,color 200ms linear,transform 100ms linear;
+    padding: 0.5rem 1.25rem;
+
+    cursor: pointer;
+}
+
+button:not(.iWidget-button):hover{
+    background: var(--rainbow);
+    color: var(--bg-b);
+}
+
+button:not(.iWidget-button):active{
+    transform: scale(0.95);
 }

@@ -97,27 +97,4 @@
 }
 
 
-.AddItemOverlay > button {
-    width: fit-content;
 
-    font-weight: 600;
-    border: 0.1rem solid var(--rainbow);
-    border-radius: 0.6rem;
-    color: var(--rainbow);
-    outline: none;
-    background: var(--bg-b);
-    transition: all 100ms ease;
-    padding: 0.5rem 1.25rem;
-
-
-
-    cursor: pointer;
-}
-
-.AddItemOverlay > button:hover{
-    transform: scale(1.05);
-}
-
-.AddItemOverlay > button:active{
-    transform: scale(0.95);
-}

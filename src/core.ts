@@ -24,19 +24,7 @@ function searchWithSearchEngine(s: string) {
 }
 
 
-const CurrentModal = createContext<
-    {
-        setModal: (modal: React.ReactElement | null)=>void,
-        getModal: ()=>React.ReactElement | null,
-    }
-    >({
-    setModal(modal){},
-    getModal() {
-        return null
-    }
-    })
 
 export {
     searchWithSearchEngine,
-    CurrentModal
 }

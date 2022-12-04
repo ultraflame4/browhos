@@ -6,56 +6,52 @@ import React, {useRef, useState} from "react";
 import {defineComponent, generateCssRainbowAnimation} from "@/utils";
 import {Icon} from "@iconify-icon/react";
 import AppDrawer from "@/components/AppDrawer/AppDrawer";
-import { CurrentModal } from './core';
+import {Link, Outlet} from "react-router-dom";
 
-const ModalContainer = defineComponent<{currentModal:React.ReactElement|null}>(props => {
-    return <div style={{
-        position: "fixed",
-        top:"50%",
-        left:"50%",
-        transform: "translate(-50%, -50%)"
-    }}>
-        {props.currentModal??""}
-    </div>
-})
 
+export function AppMainContent() {
+    return (
+        <main className="App">
+            <Clock/>
+
+            <div className={"WidgetRow"}>
+                <Searchbar/>
+                <AppDrawer/>
+            </div>
+        </main>
+    )
+}
 
 function App() {
-    const appRef = useRef<HTMLElement>(null)
-    const [currentModal, setCurrentModal] = useState<React.ReactElement|null>(null)
 
 
     return (
-        <CurrentModal.Provider value={{
-            setModal(modal) {
-                setCurrentModal(modal)
-            },
-            getModal() {
-                return currentModal
-            },
-        }}>
+        <>
             <style>
                 {generateCssRainbowAnimation()}
 
             </style>
-            <main className="App" ref={appRef}>
-                <Clock/>
 
-                <div className={"WidgetRow"}>
-                    <Searchbar/>
-                    <AppDrawer/>
-                </div>
-            </main>
+                <Outlet/>
+
             <footer>
-                <a href={"https://github.com/ultraflame4/browhos"}>
-                    <Icon icon={"mdi:github"} className={"footer-icon"}/>
-                    Github
-                </a>
+                <ul>
+                    <li>
+                        <a href={"https://github.com/ultraflame4/browhos"}>
+                            <Icon icon={"mdi:github"} className={"footer-icon"}/>
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <Link to={"settings"}>
+                            <Icon icon={"ic:round-settings"} className={"footer-icon"}/>
+                            Settings
+                        </Link>
+                    </li>
+                </ul>
             </footer>
-            <CurrentModal.Consumer>
-                {value => <ModalContainer currentModal={currentModal}/>}
-            </CurrentModal.Consumer>
-        </CurrentModal.Provider>
+
+        </>
 
     )
 }

@@ -1,0 +1,88 @@
+header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--bg-a);
+    z-index: 1;
+}
+
+
+
+a > h2{
+    opacity: 0.4;
+    transition: all 200ms linear;
+    font-size: 1.7rem;
+}
+a:has(h2){
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+a > h2:hover{
+    opacity: 1;
+    filter: drop-shadow(0 0 1em var(--rainbow));
+}
+
+a > h2:active{
+    transform: scale(0.9);
+}
+
+main{
+    padding: 0 2rem;
+}
+
+h2{
+    opacity: 0.6;
+}
+
+.pinnedApps{
+    list-style-type: none;
+    padding: 0;
+    min-width: fit-content;
+    max-width: 24rem;
+    /*border: 0.15rem solid var(--rainbow);*/
+    border-radius: 1rem;
+
+}
+.pinnedApps> li{
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    background: var(--bg-a);
+    position: relative;
+}
+
+.pinnedApps> li:hover{
+    background: var(--bg-b);
+    border: 2px solid var(--rainbow);
+}
+
+.pinnedApps-btn:nth-of-type(1){
+    margin-left: auto;
+}
+.pinnedApps> li:hover .pinnedApps-btn{
+    display: block;
+}
+
+.pinnedApps-btn{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.pinnedApps-btn:hover{
+    border-radius: 100%;
+    outline: 0.15rem solid var(--rainbow);
+
+
+}
+.pinnedApps-btn:active{
+    transform: scale(0.9);
+}
