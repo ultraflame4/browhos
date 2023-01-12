@@ -4,8 +4,6 @@
     --r2: #47ff47;
     --r3: #373aff;
 
-    --blur: 12px;
-
     height: 5rem;
     width: 5rem;
 
@@ -13,7 +11,10 @@
 .searchContainer[toggled]{
     width: 50vw;
     height: 4rem;
-    margin: 0.5rem 0;
+
+}
+.searchContainer:hover, .searchContainer:focus-within {
+    --blur: 14px;
 }
 
 .searchContainer:not([toggled]) > .input {

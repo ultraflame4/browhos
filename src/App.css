@@ -25,11 +25,31 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
+
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 6rem;
+    transition: all ease 200ms;
+    position: relative;
+}
+
+.App-center{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0;
+    height: fit-content;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
     gap: 5rem;
+    transition: all ease 300ms;
+}
+
+.App-center:has(>.searchContainer[toggled]){
+    gap: 1.5rem;
+    top: 10%;
+    transform: translateY(0%);
+
 }
 
 h1,h2,h3{
@@ -56,7 +76,7 @@ h1,h2,h3{
     border: 0.3rem solid;
     background: var(--bg-b);
 
-    --blur: 12px;
+    --blur: 8px;
 
 
     border-radius: 3rem;
@@ -68,9 +88,6 @@ h1,h2,h3{
 
 }
 
-.iWidget:hover, .iWidget:focus-within {
-    --blur: 24px;
-}
 
 
 .iWidget:not([toggled]):active {

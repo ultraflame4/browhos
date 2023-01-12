@@ -11,8 +11,10 @@ import {Link, Outlet} from "react-router-dom";
 export function AppMainContent() {
     return (
         <main className="App">
-            <Clock/>
-            <Searchbar/>
+            <div className={"App-center"}>
+                <Clock/>
+                <Searchbar />
+            </div>
 
         </main>
     )

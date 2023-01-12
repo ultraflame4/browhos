@@ -1,5 +1,5 @@
 import {defineComponent, useOverlayToggle} from "@/utils";
-import classes from "./Searchbar.module.css";
+import "./Searchbar.css";
 import {Icon} from "@iconify-icon/react";
 import React, {useEffect, useRef} from "react";
 import {searchWithSearchEngine} from "@/core";
@@ -38,10 +38,10 @@ export default defineComponent(props => {
 
 
     return (
-        <InteractiveWidget className={classes.searchContainer} onToggle={onToggle}>
-            <input type={"search"} className={classes.input} ref={inpRef} placeholder={"Where are you going today?"}/>
+        <InteractiveWidget className={"searchContainer"} onToggle={onToggle}>
+            <input type={"search"} className={"input"} ref={inpRef} placeholder={"Where are you going today?"}/>
 
-            <Icon icon={"ri:search-line"} className={classes.searchIcon} onClick={onSearch}/>
+            <Icon icon={"ri:search-line"} className={"searchIcon"} onClick={onSearch}/>
         </InteractiveWidget>
 
     )
