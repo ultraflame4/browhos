@@ -12,11 +12,8 @@ export function AppMainContent() {
     return (
         <main className="App">
             <Clock/>
+            <Searchbar/>
 
-            <div className={"WidgetRow"}>
-                <Searchbar/>
-
-            </div>
         </main>
     )
 }
