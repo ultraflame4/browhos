@@ -13,6 +13,7 @@
 .searchContainer[toggled]{
     width: 50vw;
     height: 4rem;
+    margin: 0.5rem 0;
 }
 
 .searchContainer:not([toggled]) > .input {

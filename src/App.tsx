@@ -5,7 +5,6 @@ import Clock from "@/components/Clock/Clock";
 import React, {useRef, useState} from "react";
 import {defineComponent, generateCssRainbowAnimation} from "@/utils";
 import {Icon} from "@iconify-icon/react";
-import AppDrawer from "@/components/AppDrawer/AppDrawer";
 import {Link, Outlet} from "react-router-dom";
 
 
@@ -16,7 +15,7 @@ export function AppMainContent() {
 
             <div className={"WidgetRow"}>
                 <Searchbar/>
-                <AppDrawer/>
+
             </div>
         </main>
     )

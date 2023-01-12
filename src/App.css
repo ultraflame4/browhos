@@ -67,19 +67,14 @@ h1,h2,h3{
     --blur: 12px;
 
 
-    border-radius: 100%;
+    border-radius: 3rem;
 }
 
 .iWidget[toggled] {
-    border-radius: 1.5rem;
 
+    border-radius: 2rem;
 
 }
-
-.iWidget[toggled] > .iWidget-button {
-    display: none;
-}
-
 
 .iWidget:hover, .iWidget:focus-within {
     --blur: 24px;
@@ -90,6 +85,9 @@ h1,h2,h3{
     transform: scale(95%);
 }
 
+.iWidget[toggled] > .iWidget-button {
+    display: none;
+}
 
 .iWidget-button {
     background: none;
