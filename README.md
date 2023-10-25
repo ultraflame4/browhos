@@ -1,4 +1,4 @@
-# browhos
+# browhos (Abandoned)
 A cool browser home screen for browsers.
 
 ![img.png](assets/img.png)!
